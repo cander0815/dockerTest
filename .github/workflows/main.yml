@@ -1,0 +1,13 @@
+on:
+  push:
+  schedule:
+  # 定时任务，在每天的5点推送天气信息到邮箱
+    - cron: '*/5 * * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤，这里只写了一个步骤，目的是输出hello github acition
+      - name: Run a one-line script
+        run: echo Hello, github action!
